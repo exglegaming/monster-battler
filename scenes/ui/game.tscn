@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://dnw5rdwf8fal4"]
+
+[ext_resource type="Texture2D" uid="uid://ckr0isu4oe6rb" path="res://assets/backgrounds/background1.png" id="1_21b1b"]
+[ext_resource type="Texture2D" uid="uid://blhlf2b4y0mxn" path="res://assets/back sprites/Atrox.png" id="2_nbrst"]
+[ext_resource type="Texture2D" uid="uid://e0jsnv0ayrfj" path="res://assets/battle sprites/Cleaf.png" id="3_bfhks"]
+[ext_resource type="PackedScene" uid="uid://18eb7lcdc4se" path="res://scenes/ui/monster_stats.tscn" id="3_lakwo"]
+[ext_resource type="PackedScene" uid="uid://bkw4as04iuk2v" path="res://scenes/ui/input_menu.tscn" id="4_kfd0b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kfd0b"]
+atlas = ExtResource("3_bfhks")
+region = Rect2(0, 0, 96, 96)
+
+[node name="Game" type="Control" unique_id=1688886446]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="." unique_id=2018962486]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_21b1b")
+
+[node name="Monsters" type="Control" parent="." unique_id=1322703139]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Player" type="TextureRect" parent="Monsters" unique_id=1167044091]
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = 1.0
+anchor_right = 0.05
+anchor_bottom = 1.0
+grow_vertical = 0
+texture = ExtResource("2_nbrst")
+
+[node name="Enemy" type="TextureRect" parent="Monsters" unique_id=391935690]
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.7
+anchor_top = 0.4
+anchor_right = 0.7
+anchor_bottom = 0.4
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 200.0
+offset_bottom = 200.0
+texture = SubResource("AtlasTexture_kfd0b")
+
+[node name="InputMenu" parent="." unique_id=2138577019 instance=ExtResource("4_kfd0b")]
+layout_mode = 1
+
+[node name="Stats" type="Control" parent="." unique_id=412000361]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="PlayerStats" parent="Stats" unique_id=1272078914 instance=ExtResource("3_lakwo")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.5
+anchor_right = 0.1
+anchor_bottom = 0.5
+
+[node name="EnemyStats" parent="Stats" unique_id=1052803763 instance=ExtResource("3_lakwo")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.2
+anchor_right = 0.5
+anchor_bottom = 0.2

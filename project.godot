@@ -15,12 +15,13 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Monster Battle"
+run/main_scene="uid://dnw5rdwf8fal4"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Global="*res://Global/Global.gd"
+Global="*uid://7tp6d5rwl2sb"
 
 [display]
 
@@ -38,3 +39,4 @@ folder_colors={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+rendering_device/driver.windows="d3d12"

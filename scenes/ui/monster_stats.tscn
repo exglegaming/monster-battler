@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://18eb7lcdc4se"]
+
+[node name="MonsterStats" type="Control" unique_id=1272078914]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=181759772]
+custom_minimum_size = Vector2(80, 40)
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 54.0
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=50577390]
+layout_mode = 2
+text = "Monster"
+
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer" unique_id=281396535]
+layout_mode = 2
+value = 25.0
